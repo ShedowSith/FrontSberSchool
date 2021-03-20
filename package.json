@@ -1,7 +1,6 @@
 {
   "name": "front-sber-school",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -17,12 +16,21 @@
     "@babel/preset-react": "^7.12.13",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.2",
-    "webpack": "^5.26.3",
+    "webpack": "^5.27.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShedowSith/FrontSberSchool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShedowSith/FrontSberSchool/issues"
+  },
+  "homepage": "https://github.com/ShedowSith/FrontSberSchool#readme",
+  "description": ""
 }

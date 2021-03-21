@@ -9,7 +9,7 @@ class Cell extends Component{
     }
     render() {
         return(
-            <div style = {style.but} onClick={() => this.props.updateState(this.state.id)}>
+            <div style = {style.cell} onClick={() => this.props.updateState(this.state.id)}>
                 {this.props.value}
             </div>
         )
@@ -27,6 +27,17 @@ const style = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    cell: {
+        float: 'left',
+        display: 'flex',
+        width: 50,
+        height: 50,
+        fontSize: 35,
+        border: '1px solid black',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 2
     }
 };
 // const Cell = ({ value }) =>(

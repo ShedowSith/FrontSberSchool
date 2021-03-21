@@ -1,6 +1,20 @@
 import React, { Component } from "react";
 import Cell  from './Сell';
 
+const style = {
+    wrap: {
+        margin: 'auto',
+        display: 'table',
+        border: '1px solid #666666',
+        borderSpacing: 5
+    },
+    header:{
+        margin: 'auto',
+        textAlign: 'center'
+    }
+
+};
+
 class Board extends  React.Component{
     constructor(props) {
         super(props);
@@ -59,27 +73,25 @@ class Board extends  React.Component{
     }
     render() {
         return(
-            <div>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>{this.getCell(0)}</td>
-                        <td>{this.getCell(1)}</td>
-                        <td>{this.getCell(2)}</td>
-                    </tr>
-                    <tr>
-                        <td>{this.getCell(3)}</td>
-                        <td>{this.getCell(4)}</td>
-                        <td>{this.getCell(5)}</td>
-                    </tr>
-                    <tr>
-                        <td>{this.getCell(6)}</td>
-                        <td>{this.getCell(7)}</td>
-                        <td>{this.getCell(8)}</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div style={style.wrap}>
+                <div style={style.header}>Крестики & Нолики</div>
+                <div>
+                    {this.getCell(0)}
+                    {this.getCell(1)}
+                    {this.getCell(2)}
+                </div>
+                <div>
+                    {this.getCell(3)}
+                    {this.getCell(4)}
+                    {this.getCell(5)}
+                </div>
+                <div>
+                    {this.getCell(6)}
+                    {this.getCell(7)}
+                    {this.getCell(8)}
+                </div>
                 {this.info()}
+
                 <button onClick={() => this.startNew()}>Новая игра</button>
             </div>
         )
